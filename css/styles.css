@@ -405,6 +405,7 @@ section {
         position: absolute;
         top: 24px;
         right: 24px;
+        padding: 0;
         display: flex;
         background-color: #e7e9fc;
         border-radius: 50%;
@@ -415,7 +416,7 @@ section {
         height: 24px;
         align-items: center;
         justify-content: center;
-        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
         .modal .close-btn:hover, .modal .close-btn:focus{
             background-color: #404bbf;
@@ -450,7 +451,7 @@ section {
         letter-spacing: 0.04em;
         color: #8e8f99;
     }
-    .modal .form .form-label-cont {
+    .modal .form .form-label-cont{
         margin-bottom: 8px;
     }
     .modal .form .form-input-cont{
