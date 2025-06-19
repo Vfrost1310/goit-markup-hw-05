@@ -458,36 +458,54 @@ section {
         position: relative;
     }
         .modal .form .form-label {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.04em;
+            color: #8e8f99;
         }
         .modal .form .form-input {
             border: 1px solid rgba(46, 47, 66, 0.4);;
             border-radius: 4px;
-            padding: 8px 16px 8px 38px;
+            background-color: transparent;
+            outline: transparent;
+            padding-left: 38px;
             font-family: "Roboto", sans-serif;
             font-weight: 400;
             font-size: 12px;
             letter-spacing: 0.02em;
             line-height: 24px;
+            height: 40px;
             width: 100%;
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
         .modal .form .form-input:focus {
             border-color: #4d5ae5;
-            outline: none;
         }
         .modal .form .input-icon{
             position: absolute;
             left: 16px;
             top: 50%;
             transform: translateY(-50%);
+            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
             .modal .form .form-input:focus + .input-icon{
                 fill: #4d5ae5;
             }
         .modal .form .form-textarea{
             padding: 8px 16px;
+            width: 100%;
+            height: 120px;
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.04em;
+            border: 1px solid rgba(46, 47, 66, 0.4);
+            border-radius: 4px;
+            background-color: transparent;
+            outline: transparent;
+            resize: none;
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
         .modal .form .form-textarea::placeholder {
             font-family: "Roboto", sans-serif;
@@ -497,17 +515,17 @@ section {
             letter-spacing: 0.04em;
             color: rgba(46, 47, 66, 0.4);
         }
-        .modal .form .form-label:nth-child(4) {
+        .modal .form .form-label-cont:nth-child(4) {
             margin-bottom: 16px;
         }
-        .modal .form .form-label:nth-child(5) {
-            flex-direction: row;
-            align-items: center;
+        .modal .form .form-checkbox-cont {
             margin-bottom: 24px;
         }
-        .modal .form .form-checkbox{
-            display: none;
-        }
+            .modal .form .form-label:nth-child(5) {
+                flex-direction: row;
+                align-items: center;
+                margin-bottom: 24px;
+            }
             .modal .form .custom-checkbox{
                 border-radius: 2px;
                 border: 1px solid rgba(46, 47, 66, 0.4);
@@ -515,14 +533,16 @@ section {
                 height: 16px;
                 margin-right: 8px;
                 cursor: pointer;
-                display: flex;
+                display: inline-flex;
                 justify-content: center;
                 align-items: center;
                 position: relative;
+                fill: transparent;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
             }
             .modal .form .form-checkbox:checked + .custom-checkbox{
                 background-color: #404bbf;
-                border: 1px solid #404bbf;
+                border: none;
             }
             .modal .form .custom-checkbox .checkbox-icon{
                 fill: transparent;
@@ -530,19 +550,23 @@ section {
             .modal .form .form-checkbox:checked + .custom-checkbox .checkbox-icon{
                 fill: #f4f4fd;
             }
-        .modal .form .policy-link{
-            line-height: 133%;
-            text-decoration: underline;
-            text-decoration-skip-ink: none;
-            color: #4d5ae5;
-        }
+                .modal .form .policy-link{
+                    line-height: 133%;
+                    text-decoration: underline;
+                    text-decoration-skip-ink: none;
+                    color: #4d5ae5;
+                }
         .modal .form .submit-btn {
             background: #4d5ae5;
             color: #ffffff;
             border: none;
+            font-weight: 500;
+            letter-spacing: 0.04em;
+            line-height: 1.5;
             cursor: pointer;
             margin: auto;
             min-width: 169px;
+            height: 56px;
             border-radius: 4px;
             padding: 16px 32px;
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
