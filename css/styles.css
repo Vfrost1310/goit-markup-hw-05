@@ -359,7 +359,7 @@ section {
                 max-width: 264px;
             }
         .footer .container .social-cont{
-            margin-right: 80pz;
+            margin-right: 80px;
         }
         .footer .container .social-cont .social-text{
             margin-bottom: 16px;
@@ -512,7 +512,6 @@ section {
     .modal .form{
         display: flex;
         flex-direction: column;
-        gap: 8px;
     }
     .modal .form .form-base-text {
         font-family: "Roboto", sans-serif;
